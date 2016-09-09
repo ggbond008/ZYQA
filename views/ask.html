@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加问题</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <ul>
+   {{each keywords as keyword i}}
+      <li>{{keyword.text}}</li>
+      {{/each}} 
+   </ul>
+   <a href="javascript:addKeyword()">添加关键词</a>
+   <form action="#">
+    <textarea name="text" id="" cols="80" rows="10"></textarea>
+    <input type="submit" value="提交问题">
+   </form>
+   <script src="/libs/jquery.js"></script>
+   <script src="/js/ask.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>问答</title>
+</head>
+<body>
+    <h1>智游教育问答</h1>
+    {{if account}}
+    {{account}}
+    <a href="/user/signout">退出</a>
+    {{else}}
+    <a href="/user/signin">登陆</a>
+    <a href="/user/register">注册</a>
+     {{/if}}
+     <div>
+         <a href="/ask">添加问题</a>
+     </div>
+     {{each questions as q i}}
+     <h3> {{q.text}}</h3>
+     <p>{{q.keyword}},{{q.createUser.account}},{{q.createTime | formatTime}},{{q.ip}}</p>
+    {{/each}}
+</body>
+</html>
